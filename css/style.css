@@ -1,0 +1,101 @@
+:root {
+  --background-color: rgb(17, 21, 28);
+  --sun-color: rgb(247, 173, 83);
+  --moon-color: rgb(17, 21, 28);
+  --text-color: rgb(204, 205, 227);
+}
+
+.active {
+  --background-color: rgb(204, 205, 227);
+  --moon-color: rgb(17, 21, 28);
+  --text-color: rgb(17, 21, 28);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: min(1280px, 100% - 4rem);
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+  background-color: var(--background-color);
+}
+
+.main_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.icons_div {
+  position: absolute;
+  top: -100%;
+  padding-block: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.fa-sun {
+  padding: 0.5rem;
+  color: var(--sun-color);
+  font-size: 70px;
+
+  &:hover {
+    background-color: rgba(124, 124, 124, 0.5);
+    border-radius: 50%;
+  }
+}
+
+/** initially moon must be display NONE */
+
+.fa-moon {
+  padding-block: 0.3rem;
+  padding-inline: 0.8rem;
+  display: none;
+  color: var(--moon-color);
+  font-size: 70px;
+  &:hover {
+    background-color: rgba(124, 124, 124, 0.4);
+    border-radius: 50%;
+  }
+}
+
+h1 {
+  margin-block: 0.8rem;
+  font-size: 4rem;
+  letter-spacing: 0.1rem;
+  color: var(--text-color);
+}
+p {
+  margin-block: 1rem;
+  font-size: 2rem;
+  letter-spacing: 0.05rem;
+  color: var(--text-color);
+}
+
+@media (max-width: 35em) {
+  h1 {
+    font-size: 3.5rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 25em) {
+  h1 {
+    font-size: 3.2rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+}
