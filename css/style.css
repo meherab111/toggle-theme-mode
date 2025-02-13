@@ -26,6 +26,11 @@ body {
   align-items: center;
   font-family: "Outfit", sans-serif;
   background-color: var(--background-color);
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
 }
 
 .main_div {
@@ -42,6 +47,10 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
+
+  &:hover{
+    cursor: pointer;
+  }
 }
 
 .fa-sun {
