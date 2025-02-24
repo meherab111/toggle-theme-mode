@@ -4,7 +4,7 @@ let moonIcon = document.querySelector(".fa-moon");
 
 let sunIcon = document.querySelector(".fa-sun");
 
-//! SUN MODE FUNCTIONALITY
+// Sun Mode Functionality
 
 const sunFunc = () => {
   body.classList.add("active");
@@ -17,6 +17,8 @@ if (localStorage.getItem("sun")) {
 
   sunFunc();
 }
+
+// Sun Button Click Functionality
 
 sunIcon.addEventListener("click", () => {
   localStorage.setItem("sun", "light");
@@ -32,7 +34,7 @@ sunIcon.addEventListener("click", () => {
   sunFunc();
 });
 
-//! MOON MODE FUNCTIONALITY
+// Moon Mode Functionality
 
 const moonFunc = () => {
   body.classList.remove("active");
@@ -45,6 +47,8 @@ if (localStorage.getItem("moon")) {
 
   moonFunc();
 }
+
+// Moon Button Click Functionality
 
 moonIcon.addEventListener("click", () => {
   localStorage.setItem("moon", "dark");
